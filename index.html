@@ -17,18 +17,20 @@
     ></script>
 
     <script>
-      const Book = () => {
+      const Book = (props) => {
         return React.createElement("div", {}, [
-          React.createElement("h2", {}, "Title"),
-          React.createElement("p", {}, "Description"),
-          React.createElement("p", {}, "Price"),
+          React.createElement("h2", {}, props.name),
+          React.createElement("p", {}, props.year),
+          React.createElement("p", {}, props.price),
         ]);
       };
 
       const App = () => {
         return React.createElement("div", {}, [
             React.createElement('h1', {}, "Создаём приложение на React"), 
-            React.createElement(Book)
+            React.createElement(Book, {name: 'JS', year: 2019, price: '$87'}),
+            React.createElement(Book, {name: 'JS for beginners', year: 2016, price: '$33'}),
+            React.createElement(Book, {name: 'React', year: 2025, price: '$117'}),
         ]);
       };
 
