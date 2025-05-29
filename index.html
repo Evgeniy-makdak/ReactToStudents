@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learn React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+      const Book = () => {
+        return React.createElement("div", {}, [
+          React.createElement("h2", {}, "Title"),
+          React.createElement("p", {}, "Description"),
+          React.createElement("p", {}, "Price"),
+        ]);
+      };
+
+      const App = () => {
+        return React.createElement("div", {}, [
+            React.createElement('h1', {}, "Создаём приложение на React"), 
+            React.createElement(Book)
+        ]);
+      };
+
+      ReactDOM.render(
+        React.createElement(App),
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
