@@ -1,4 +1,9 @@
 export const Book = (props) => {
+
+  if (!props.name) {
+    return null;
+  }
+
   return (
     <div>
       <h2>{props.name}</h2>

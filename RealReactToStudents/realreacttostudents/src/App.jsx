@@ -9,7 +9,7 @@ const App = () => {
         "children"
       </Book>
       <Book name="JS for beginners" year="2016" price="$33" />
-      <Book name="React" year="2025" price="$117" />
+      <Book year="2025" price="$117" />
     </div>
   );
 };
